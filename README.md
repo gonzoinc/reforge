@@ -20,6 +20,15 @@
   <a href="https://github.com/gonzoinc/reforge/issues"><strong>🐛 Report an app bug</strong></a>
 </p>
 
+## ⬇️ Download the Current Beta
+
+**[Download Reforge 1.0.0 Beta 1 for Windows](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.1)**
+
+The release page includes the Windows installer, its SHA-256 checksum, release notes, system requirements, and known beta limitations.
+
+> [!IMPORTANT]
+> This beta is for testing the **Reforge desktop app only**. End-user Reforge display hardware is not currently available, so testers are not expected to test USB, Bluetooth, firmware, display installation, or vehicle operation. Please focus feedback on the app experience, template tools, included assets, settings, import/export behavior, installation, and uninstall behavior.
+
 Reforge is a Windows desktop application for creating, managing, and uploading display templates for supported Mitsubishi 3000GT and Dodge Stealth digital climate-control display replacements.
 
 - 🎨 Create and customize display templates.
