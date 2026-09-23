@@ -1,5 +1,9 @@
 # Reforge Beta
 
+<p align="center">
+  <img src="assets/reforge-updates-20260916-clean.png" alt="Reforge AC display project" width="100%">
+</p>
+
 Reforge is a Windows desktop application for creating, managing, and uploading display templates for supported Mitsubishi 3000GT and Dodge Stealth digital climate-control display replacements.
 
 > [!WARNING]
@@ -33,7 +37,30 @@ When a beta is available:
 3. Download the Windows installer attached to that release.
 4. Compare the installer’s SHA-256 hash with the published checksum before running it.
 
-Beta installers may not be code-signed. Windows SmartScreen may therefore display an unrecognized-app warning even when the installer was downloaded from this official repository. Never download Reforge from an unofficial mirror.
+## Installing the Unsigned Beta on Windows
+
+Reforge beta installers are not currently code-signed. On some Windows systems, Microsoft Defender SmartScreen blocks the installer completely and does not offer a **More info** or **Run anyway** option. In that case, SmartScreen's app check must be disabled temporarily before the installer can run.
+
+Before changing SmartScreen:
+
+1. Confirm that the installer came from this repository's [official Releases page](https://github.com/gonzoinc/reforge/releases).
+2. Compare the downloaded installer's SHA-256 hash with the checksum published beside that release.
+3. Do not continue if the filename or checksum does not match.
+
+To install when SmartScreen blocks the file:
+
+1. Open **Windows Security** from the Windows Start menu.
+2. Select **App & browser control**.
+3. Select **Reputation-based protection settings**.
+4. Turn **Check apps and files** off. Approve the Windows confirmation prompt if one appears.
+5. Run the Reforge installer again.
+6. Windows will still display a confirmation warning because the installer has an unknown publisher. Select the affirmative option—such as **Yes**, **Run**, or **Proceed**—to continue the installation.
+7. As soon as installation finishes, return to **Windows Security → App & browser control → Reputation-based protection settings** and turn **Check apps and files** back on.
+
+> [!IMPORTANT]
+> Disable only **Check apps and files**, only for the time needed to install the verified Reforge download, and re-enable it immediately afterward. Do not disable antivirus protection or other Windows Security features. If a work or school administrator controls this setting, contact that administrator instead of bypassing the policy.
+
+See Microsoft's [App & browser control documentation](https://support.microsoft.com/en-us/windows/app-browser-control-in-the-windows-security-app-8f68fb65-ebb4-3cfb-4bd7-2a32ea6bd946) for additional information about SmartScreen and reputation-based protection.
 
 ## Reporting an App Bug
 
