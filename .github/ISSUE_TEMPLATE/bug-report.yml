@@ -3,8 +3,6 @@ description: Report a reproducible problem in the Reforge Windows desktop app.
 title: "[Bug]: "
 labels:
   - bug
-  - beta
-  - needs triage
 body:
   - type: markdown
     attributes:
