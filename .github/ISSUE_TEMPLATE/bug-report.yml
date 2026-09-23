@@ -1,0 +1,138 @@
+name: Reforge app bug
+description: Report a reproducible problem in the Reforge Windows desktop app.
+title: "[Bug]: "
+labels:
+  - bug
+  - beta
+  - needs triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping test Reforge. This form is for desktop-app bugs only. Please search existing issues first and remove secrets or personal information from anything you attach.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues and did not find the same problem.
+          required: true
+        - label: This report is about the Reforge Windows app, not firmware, wiring, hardware, installation, or vehicle behavior.
+          required: true
+        - label: I removed passwords, tokens, private keys, personal information, and other secrets from this report and its attachments.
+          required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Reforge version
+      description: Find this in About Reforge by selecting the Reforge logo in the upper-left corner.
+      placeholder: Example: 1.0.0-beta.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Startup or beta notice
+        - Template library
+        - Template editor
+        - Asset library
+        - Import or export
+        - Upload wizard
+        - USB connection
+        - Bluetooth connection
+        - Settings or About
+        - Installer, update, or uninstall
+        - Performance, freeze, or crash
+        - Other app behavior
+    validations:
+      required: true
+
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: Example: Windows 11 24H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: display-generation
+    attributes:
+      label: Display generation
+      description: Choose Not applicable if the bug is unrelated to a display generation.
+      options:
+        - Not applicable
+        - 1st Gen / 480 x 320
+        - 2nd Gen / 320 x 240
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Briefly describe the problem and when you noticed it.
+      placeholder: Describe the bug clearly and specifically.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest reliable sequence that triggers the problem.
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Change...
+        4. See...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      placeholder: What did you expect Reforge to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      placeholder: What did Reforge do instead? Include any exact error message.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Happened once
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, logs, or sample files
+      description: Drag files here if they help reproduce the app bug. Remove secrets, personal information, and unrelated content first.
+      placeholder: Attach or paste sanitized supporting material here.
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround or additional context
+      description: Include anything else that may help, such as whether restarting Reforge changes the behavior.

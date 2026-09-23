@@ -1,0 +1,15 @@
+# Installers and release packages belong in GitHub Releases, not Git history.
+*.exe
+*.msi
+*.msix
+*.zip
+*.7z
+*.sha256
+
+# Local operating-system and editor files.
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vs/
+.vscode/
