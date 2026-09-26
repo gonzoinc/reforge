@@ -1,5 +1,20 @@
 # Reforge Beta
 
+## ⬇️ Download Reforge Beta 2 and Complete the Beta Wizard
+
+1. Download **[Reforge 1.0.0 Beta 2 for Windows](https://github.com/gonzoinc/reforge/releases/download/v1.0.0-beta.2/Reforge-Setup-1.0.0-beta.2-win-x64.exe)**.
+2. Download the required **[Beta Asset Samples](https://github.com/gonzoinc/reforge/releases/download/v1.0.0-beta.2/Reforge-Beta-Asset-Samples.zip)** and extract the ZIP to an easy-to-find folder.
+3. Install and launch Reforge. The **Beta Wizard** appears in the right sidebar and guides you through the required tasks in order.
+4. Use sample files `01` through `05` for normal asset imports and the blank-template task. Use `06-temperature-bars-asset-group.svg` for the temperature asset-group mapping task.
+5. Complete each wizard task once. The progress bars show the five required template edits and the five assets plus mapped temperature group required for the blank template.
+6. If a task is confusing or blocked, select its **?** button to leave a note. A blocked task can be skipped only after adding a comment, and that feedback is included with the final beta record.
+7. After every task is resolved, select **Complete Beta Wizard**. Reforge opens the Beta Onboarding form where you can submit feedback and optionally join the conversion-display waitlist. Verify the email message to finish the entry.
+
+> [!IMPORTANT]
+> The sample artwork is also installed with Reforge and can be opened from the relevant Beta Wizard help window. The separate ZIP is provided so the required files are available before testing begins.
+
+The installer is unsigned. Verify its SHA-256 checksum from the release assets before running it, and follow the [SmartScreen instructions below](#installing-the-unsigned-beta-on-windows) if Windows blocks installation.
+
 <p align="center">
   <img src="assets/reforge-updates-20260916-clean.png" alt="Reforge AC display project" width="80%">
 </p>
@@ -20,9 +35,9 @@
   <a href="https://github.com/gonzoinc/reforge/issues"><strong>🐛 Report an app bug</strong></a>
 </p>
 
-## ⬇️ Download the Current Beta
+## 🧪 What This Beta Tests
 
-**[Download Reforge 1.0.0 Beta 1 for Windows](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.1)**
+**[Open the Reforge 1.0.0 Beta 2 release page](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.2)**
 
 The release page includes the Windows installer, its SHA-256 checksum, release notes, system requirements, and known beta limitations.
 
