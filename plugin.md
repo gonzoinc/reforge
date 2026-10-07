@@ -21,6 +21,9 @@ Plugins do not contain executable code. There is no public C++, DLL, script, HTT
   - [CAN plugin hardware](#can-plugin-hardware)
   - [Digital-input plugin hardware](#digital-input-plugin-hardware)
 - [1st-gen DCC Advanced hardware endpoints](#1st-gen-dcc-advanced-hardware-endpoints)
+- [Using plugin data in the screen editor](#using-plugin-data-in-the-screen-editor)
+  - [Bind plugin data to an asset](#bind-plugin-data-to-an-asset)
+  - [Add an alarm or alert](#add-an-alarm-or-alert)
 - [Configurable passive CAN mapper example](#example-configurable-passive-can-mapper)
 - [Fixed CAN signal example](#example-fixed-can-signal)
 - [Digital-input example](#example-digital-input)
@@ -163,6 +166,54 @@ The connector provides three 3.3 V input signals and one ground connection. It d
 
 > [!WARNING]
 > Never connect vehicle CAN-H, CAN-L, 5 V, 12 V, or another unconditioned vehicle signal directly to connector pins 1 through 3. These are unprotected ESP32-S3 3.3 V inputs. CAN requires a separately powered CAN transceiver with 3.3 V-safe logic. The four-pin plugin connector does not provide expansion power.
+
+## Using plugin data in the screen editor
+
+Plugin functions become additional data sources in the normal Reforge screen editor. A plugin does not create or control its own screen. Instead, the user adds an ordinary Reforge asset to a custom template and assigns one of the enabled plugin's functions to that asset.
+
+Built-in OEM templates remain locked. Plugin data can be added only to user-created custom templates.
+
+> [!NOTE]
+> These steps describe the plugin-capable editor workflow under development. Enabled plugin functions already appear in the development editor's Function list. Type-aware previews, alarm editing, firmware export, and live device rendering are not complete in the current public release.
+
+### Bind plugin data to an asset
+
+1. Import the plugin from **Plugins > Import Plugin**.
+2. Open the plugin's **Settings** and complete any required configuration. For a CAN Mapper plugin, add and save the CAN fields that should become display functions.
+3. Enable the plugin. Disabled plugins do not add choices to the screen editor.
+4. Create a custom template or open an existing custom template in the screen editor.
+5. Add or import the asset that will display the plugin data, then place and size it on the screen.
+6. Select the asset and open its **Function** list.
+7. Choose the plugin function by its friendly name, such as `Engine Speed`, `Oil Pressure`, or `Warning Active`. Reforge stores the plugin and function IDs internally, so users do not need to enter a namespaced ID.
+8. Choose a display behavior supported by that function and asset:
+   - **Text** for a short value or status label.
+   - **Digits** for a numeric value such as RPM, pressure, or temperature.
+   - **Visibility** to show or hide an icon or warning asset.
+   - **Asset Group** to select artwork for boolean, enum, or numeric states.
+   - **Gauge**, **Bar**, or **Graph** for numeric data when those editor elements become available.
+9. Enter a preview value, when available, and verify the normal, minimum, maximum, and stale states.
+10. Save the custom template. Once firmware export and runtime support are available, upload it through the normal Reforge upload workflow.
+
+If the plugin is later disabled or removed, Reforge keeps the saved asset assignment but marks its function unavailable. Re-enable the plugin or assign a replacement function to repair the template.
+
+### Add an alarm or alert
+
+Reforge uses the term **alert** for an alarm shown on the display. Alerts use the same asset-first workflow: add the warning artwork or text, then assign plugin data that decides when it appears.
+
+1. Add a warning icon, text asset, or asset group to a custom template.
+2. Select the warning element and choose a plugin function that supports **Alert** or **Visibility** assignment.
+3. Choose the trigger condition:
+   - Boolean equals `true` or `false`.
+   - Number is less than, less than or equal to, greater than, or greater than or equal to a threshold.
+   - Number is inside or outside a specified range.
+   - Plugin data becomes stale, reports an error, or is unavailable.
+4. Enter the trigger value or range.
+5. Choose the alert content and appearance, such as warning text, an icon or asset group, foreground/background colors, and severity.
+6. Choose the dismissal behavior: remain visible until the trigger clears, hide after a timer, dismiss on tap, or dismiss on tap and reset after the trigger clears.
+7. Position and size the alert inside the editor-provided bounds.
+8. Preview both the normal and triggered states, then save the template.
+
+Alerts are host-rendered and bounded by Reforge. Plugins do not receive touch coordinates, draw directly on the display, or place content outside the area selected in the editor. Live gauges, graphs, and continuously changing numeric displays belong on custom templates rather than in a main-screen alert.
 
 ## Example: configurable passive CAN mapper
 
