@@ -10,7 +10,7 @@ This example shows one simple way to connect an existing CAN bus and a nominal 1
 - Reforge connector pin 3 / `EXP_IO3`: not connected
 - Reforge connector pin 4 / `EXP_GND`: shared logic ground
 
-The project targets only the **1st-gen DCC Advanced Rev B 1.0** board. Basic, Advanced Rev A, and 2nd-gen boards are not supported.
+The project targets only the **1st-gen DCC Advanced Version**. The Basic Version and 2nd-gen boards are not supported.
 
 ## Board previews
 

@@ -5,7 +5,7 @@ Reforge Plugin API v1 lets authors add input data to Reforge through a validated
 Plugins do not contain executable code. There is no public C++, DLL, script, HTTP, or native runtime API in v1.
 
 > [!IMPORTANT]
-> Plugin API v1 targets only the manufactured **1st-gen DCC Advanced Rev B 1.0** board (`reforge-first-gen-rev-b-v1`). The 1st-gen DCC Basic versions do not support plugins, and neither do 2nd-gen DCC boards.
+> Plugin API v1 targets only the **1st-gen DCC Advanced Version** (`reforge-first-gen-rev-b-v1`). The 1st-gen DCC Basic Version does not support plugins, and neither do 2nd-gen DCC boards.
 
 > [!NOTE]
 > This guide documents the plugin v1 authoring contract while plugin support is still under development. Plugins are not included in the current Reforge 1.0.0 Beta 2 public release. Development builds can import, validate, configure, enable, update, and remove packages and expose enabled plugin functions in the custom-template editor. Firmware export, on-device adapters, and live plugin-value rendering remain unfinished.
@@ -120,7 +120,7 @@ No public v1 permission allows GPIO output, CAN transmission, OBD-II requests, U
 
 Every plugin installation must follow these requirements:
 
-- Use a **1st-gen DCC Advanced Rev B 1.0** board. Basic, Advanced Rev A, and 2nd-gen boards do not have a supported plugin connection.
+- Use a **1st-gen DCC Advanced Version** board. The Basic Version and 2nd-gen boards do not have a supported plugin connection.
 - Treat `EXP_IO1`, `EXP_IO2`, and `EXP_IO3` as **3.3 V input-only signals**. They are not 5 V- or 12 V-tolerant.
 - Power the external sensor, interface, or CAN module from its own correctly regulated supply. The Advanced expansion connector does not provide accessory power.
 - Connect the external module's logic ground to connector pin 4 (`EXP_GND`) so its 3.3 V logic has the same reference as Reforge.
@@ -155,7 +155,7 @@ If the source voltage, grounding, or required protection is uncertain, do not co
 
 ## 1st-gen DCC Advanced hardware endpoints
 
-The 1st-gen DCC Advanced Rev B board exposes one four-pin plugin connector. Plugin manifests use the logical signal names below rather than raw GPIO numbers. The Basic boards do not have this plugin connector.
+The 1st-gen DCC Advanced Version exposes one four-pin plugin connector. Plugin manifests use the logical signal names below rather than raw GPIO numbers. The Basic Version does not have this plugin connector.
 
 | Connector pin | Logical signal | ESP32-S3 mapping | Supported use |
 | ---: | --- | --- | --- |

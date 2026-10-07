@@ -55,9 +55,9 @@ Reforge is a Windows desktop application for creating, managing, and uploading d
 Two Reforge display versions are planned for the **1st-gen DCC**. Both replace the original display and show live factory climate-control information, but they are intended for different levels of customization. The display hardware is still in development and is not included in the current app-only beta.
 
 > [!IMPORTANT]
-> A 1st-gen DCC does not automatically include the Advanced features. Custom templates, multiple template slots, app/USB/Bluetooth template uploads, touchscreen settings, user-adjustable and automatic dimming, screensavers, and plugins require the **1st-gen DCC Advanced Rev B 1.0** version. The 1st-gen DCC Basic version does not support those features.
+> A 1st-gen DCC does not automatically include the Advanced features. Custom templates, multiple template slots, app/USB/Bluetooth template uploads, touchscreen settings, user-adjustable and automatic dimming, screensavers, and plugins require the **1st-gen DCC Advanced Version**. The 1st-gen DCC Basic Version does not support those features.
 
-| Feature | 1st-gen Basic | 1st-gen Advanced (Rev B 1.0) |
+| Feature | 1st-gen Basic Version | 1st-gen Advanced Version |
 | --- | :---: | :---: |
 | Designed for the 1st-gen DCC | ✅ | ✅ |
 | Live temperature, fan, vent mode, A/C, AUTO, ECON, and intake status | ✅ | ✅ |
@@ -72,7 +72,7 @@ Two Reforge display versions are planned for the **1st-gen DCC**. Both replace t
 | Bluetooth template upload | ❌ | ✅ |
 | Touchscreen menu and settings | ❌ | ✅ |
 | Screensaver support | ❌ | ✅ |
-| Reforge plugin support (Advanced Rev B 1.0 only) | ❌ | ✅ |
+| Reforge plugin support | ❌ | ✅ |
 | Passive CAN and digital-input plugins | ❌ | ✅ |
 
 ### Basic
@@ -81,7 +81,7 @@ Basic is the simple OEM-style version. It starts directly into the built-in `1st
 
 ### Advanced
 
-Advanced is the customizable 1st-gen version. Within the 1st-gen product line, only the **1st-gen DCC Advanced Rev B 1.0** version supports Reforge templates, two on-device template slots, app/USB/Bluetooth template uploads, touchscreen controls, persistent brightness and automatic dim/black settings, screensavers, and Plugin API v1. The 1st-gen Basic version does not support those features. Plugin API v1 also does not support 2nd-gen DCC boards.
+The **1st-gen DCC Advanced Version** is the customizable 1st-gen product. It supports Reforge templates, two on-device template slots, app/USB/Bluetooth template uploads, touchscreen controls, persistent brightness and automatic dim/black settings, screensavers, and Plugin API v1. The 1st-gen DCC Basic Version does not support those features. Plugin API v1 also does not support 2nd-gen DCC boards.
 
 See [Building Reforge Plugins](plugin.md) for the package format, available inputs, manifest examples, and current development status.
 
