@@ -50,6 +50,37 @@ Reforge is a Windows desktop application for creating, managing, and uploading d
 - 🧩 Manage artwork, layouts, and display assets.
 - 🚀 Upload finished templates to supported Reforge displays over USB or Bluetooth.
 
+## 🔧 Basic and Advanced Display Versions
+
+Two Reforge display versions are planned for the **1st-gen DCC**. Both replace the original display and show live factory climate-control information, but they are intended for different levels of customization. The display hardware is still in development and is not included in the current app-only beta.
+
+| Feature | Basic | Advanced (Rev B 1.0) |
+| --- | :---: | :---: |
+| Designed for the 1st-gen DCC | ✅ | ✅ |
+| Live temperature, fan, vent mode, A/C, AUTO, ECON, and intake status | ✅ | ✅ |
+| 3.5-inch 480 × 320 color display | ✅ | ✅ |
+| Reforge `1st Gen OEM DCC` display layout | ✅ Fixed layout | ✅ Included layout |
+| Dims with the vehicle illumination signal | ✅ Two fixed brightness levels | ✅ Configurable brightness and automatic dimming |
+| Custom display templates | ❌ | ✅ |
+| Multiple template slots | ❌ | ✅ Two slots |
+| Template upload from the Reforge app | ❌ | ✅ |
+| USB template upload | ❌ | ✅ |
+| Bluetooth template upload | ❌ | ✅ |
+| Touchscreen menu and settings | ❌ | ✅ |
+| Screensaver support | ❌ | ✅ |
+| Reforge plugin support | ❌ | ✅ Advanced Rev B only |
+| Passive CAN and digital-input plugins | ❌ | ✅ Requires compatible protected expansion hardware |
+
+### Basic
+
+Basic is the simple OEM-style version. It starts directly into the built-in `1st Gen OEM DCC` layout and displays the normal climate-control information. It has no custom templates, template uploads, Bluetooth service, touchscreen menu, screensaver, user settings, or plugins. Display brightness switches between fixed normal and dim levels using the vehicle illumination signal.
+
+### Advanced
+
+Advanced is the customizable version. It supports Reforge templates, two on-device template slots, USB and Bluetooth template uploads, touchscreen controls, persistent brightness and automatic dim/black settings, and screensavers. Plugin API v1 is exclusive to the **1st-gen DCC Advanced Rev B 1.0** board; Basic and 2nd-gen DCC boards do not support plugins.
+
+See [Building Reforge Plugins](plugin.md) for the package format, available inputs, manifest examples, and current development status.
+
 > [!TIP]
 > 📣 **Follow [Reforge on Facebook](https://www.facebook.com/reforge3s/) for development updates, beta announcements, and release news.** You can also visit [reforge.gonzoinc.com](https://reforge.gonzoinc.com/) for official project information.
 
@@ -126,6 +157,7 @@ The license does not grant access to or rights in unpublished source code, firmw
 
 ## 📚 Legal And Project Documents
 
+- [Plugin Authoring Guide](plugin.md)
 - [Software License](LICENSE.md)
 - [Notices](NOTICE.md)
 - [Commercial Licensing](COMMERCIAL-LICENSE.md)
