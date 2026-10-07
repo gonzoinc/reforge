@@ -1,0 +1,11 @@
+Reference,Quantity,Value,Manufacturer part,Package,Notes
+U1,1,3.3 V LDO,Microchip MCP1799T-3302H/TT,SOT-23-3,45 V input-rated fixed-output regulator
+U2,1,3.3 V CAN transceiver,Texas Instruments SN65HVD230D,SOIC-8,RS tied low for high-speed mode
+R1,1,10 kOhm,,0805,TXD recessive-state pull-up
+R2,1,120 Ohm,,0805,CAN termination resistor enabled by JP1
+C1,1,1 uF 50 V X7R,,0805,Regulator input capacitor
+C2,1,2.2 uF 10 V X7R,,0805,Regulator output capacitor
+C3,1,100 nF 10 V X7R,,0805,CAN transceiver decoupling capacitor
+J1,1,4-position 5.08 mm terminal block,,Through-hole,CAN_L CAN_H +12V GND
+J2,1,1x4 2.54 mm pin header,,Through-hole,Reforge expansion connector
+JP1,1,1x2 2.54 mm pin header and shunt,,Through-hole,Optional 120 Ohm termination

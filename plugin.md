@@ -130,6 +130,8 @@ Every plugin installation must follow these requirements:
 
 ### CAN plugin hardware
 
+An editable [CAN Mapper interface reference](examples/can-interface-reference/README.md) is included with this repository. It contains a complete KiCad schematic and routed PCB using individual components. It is an untested reference example, not a validated or production-ready accessory.
+
 A CAN plugin requires an external CAN transceiver or interface board. The vehicle CAN wires connect to that interface—not directly to Reforge.
 
 - The interface must use 3.3 V-safe logic on the Reforge side.
