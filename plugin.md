@@ -120,7 +120,7 @@ Every plugin installation must follow these requirements:
 - Use a **1st-gen DCC Advanced Rev B 1.0** board. Basic, Advanced Rev A, and 2nd-gen boards do not have a supported plugin connection.
 - Treat `EXP_IO1`, `EXP_IO2`, and `EXP_IO3` as **3.3 V input-only signals**. They are not 5 V- or 12 V-tolerant.
 - Power the external sensor, interface, or CAN module from its own correctly regulated supply. The Advanced expansion connector does not provide accessory power.
-- Connect the external module's logic ground to `EXP_GND` so its 3.3 V logic has the same reference as Reforge.
+- Connect the external module's logic ground to connector pin 4 (`EXP_GND`) so its 3.3 V logic has the same reference as Reforge.
 - Never feed power into Reforge through an expansion signal or through `EXP_GND`.
 - Match the physical wiring to the signals claimed in `plugin.json`. Do not move a plugin to a different expansion input without updating and revalidating its manifest.
 - Public plugins are input-only. Do not use plugin wiring to drive a vehicle circuit, transmit CAN frames, or control an external load.
@@ -130,16 +130,16 @@ Every plugin installation must follow these requirements:
 A CAN plugin requires an external CAN transceiver or interface board. The vehicle CAN wires connect to that interface—not directly to Reforge.
 
 - The interface must use 3.3 V-safe logic on the Reforge side.
-- Connect the interface's receive output to `EXP_IO1`.
-- Connect its controller transmit/idle input to `EXP_IO2` when the plugin manifest claims `twai.listen.txIdle`.
-- Connect the interface logic ground to `EXP_GND`.
-- Power the interface separately; J2 does not provide 3.3 V or 5 V accessory power.
+- Connect the interface's receive output to connector pin 1 (`EXP_IO1` / GPIO18).
+- Connect its controller transmit/idle input to connector pin 2 (`EXP_IO2` / GPIO15) when the plugin manifest claims `twai.listen.txIdle`.
+- Connect the interface logic ground to connector pin 4 (`EXP_GND`).
+- Power the interface separately; the four-pin plugin connector does not provide 3.3 V or 5 V accessory power.
 - Keep the Reforge CAN controller in listen-only mode. Plugin API v1 does not transmit frames or send OBD-II requests.
 - Follow the interface manufacturer's vehicle-side wiring, isolation, protection, and termination instructions.
 
 ### Digital-input plugin hardware
 
-A digital-input plugin may use `EXP_IO1`, `EXP_IO2`, or `EXP_IO3` when that signal is claimed as `gpio.digitalInput`.
+A digital-input plugin may use connector pin 1 (`EXP_IO1` / GPIO18), pin 2 (`EXP_IO2` / GPIO15), or pin 3 (`EXP_IO3` / GPIO7) when that signal is claimed as `gpio.digitalInput`.
 
 - The signal reaching Reforge must stay between 0 V and 3.3 V.
 - A raw vehicle, 5 V, or 12 V signal must first pass through an appropriate 3.3 V-safe conditioning or isolation circuit.
@@ -150,18 +150,19 @@ If the source voltage, grounding, or required protection is uncertain, do not co
 
 ## 1st-gen DCC Advanced hardware endpoints
 
-Plugin manifests claim logical connector signals on the 1st-gen DCC Advanced Rev B board, never raw GPIO numbers. These endpoints do not exist as a plugin contract on the 1st-gen DCC Basic boards.
+The 1st-gen DCC Advanced Rev B board exposes one four-pin plugin connector. Plugin manifests use the logical signal names below rather than raw GPIO numbers. The Basic boards do not have this plugin connector.
 
-| Signal | Rev B connector | Supported modes | Notes |
-| --- | --- | --- | --- |
-| `EXP_IO1` | J2 pin 4 | `gpio.digitalInput`, `twai.rx` | Direct, unprotected 3.3 V GPIO18 input. |
-| `EXP_IO2` | J2 pin 5 | `gpio.digitalInput`, `twai.listen.txIdle` | Direct, unprotected 3.3 V GPIO15. Public plugins cannot drive it; TX-idle is host-owned. |
-| `EXP_IO3` | J2 pin 6 | `gpio.digitalInput` | Direct, unprotected 3.3 V GPIO7 input. |
-| `EXP_POWER` | J2 pin 7 | none | No-connect and unavailable to plugins. |
-| `EXP_GND` | J2 pin 8 | reference only | Signal ground; not a power source. |
+| Connector pin | Logical signal | ESP32-S3 mapping | Supported use |
+| ---: | --- | --- | --- |
+| 1 | `EXP_IO1` | GPIO18 | Digital input or CAN receive (`twai.rx`) |
+| 2 | `EXP_IO2` | GPIO15 | Digital input or CAN listen-only idle (`twai.listen.txIdle`) |
+| 3 | `EXP_IO3` | GPIO7 | Digital input |
+| 4 | `EXP_GND` | Ground | Signal reference |
+
+The connector provides three 3.3 V input signals and one ground connection. It does not provide an accessory-power pin.
 
 > [!WARNING]
-> Never connect vehicle CAN-H, CAN-L, 5 V, 12 V, or another unconditioned vehicle signal directly to `EXP_IO1` through `EXP_IO3`. These are unprotected ESP32-S3 3.3 V pins. CAN requires a separately powered, protected CAN transceiver with 3.3 V-safe logic. J2 does not provide expansion power.
+> Never connect vehicle CAN-H, CAN-L, 5 V, 12 V, or another unconditioned vehicle signal directly to connector pins 1 through 3. These are unprotected ESP32-S3 3.3 V inputs. CAN requires a separately powered CAN transceiver with 3.3 V-safe logic. The four-pin plugin connector does not provide expansion power.
 
 ## Example: configurable passive CAN mapper
 
