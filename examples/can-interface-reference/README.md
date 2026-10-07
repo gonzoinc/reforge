@@ -41,6 +41,8 @@ Verify the source vehicle's CAN pinout and polarity before connecting it. This e
 
 ## Reforge connector J2
 
+J2 is a four-position, right-angle **JST GH 1.25 mm** connector (`SM04B-GHS-TB`). It matches the connector family used on Reforge boards; it is not a generic 2.54 mm pin header.
+
 | Pin | Reforge signal | Circuit connection |
 | ---: | --- | --- |
 | 1 | `EXP_IO1` / GPIO18 | SN65HVD230 receiver output (`R`) |
