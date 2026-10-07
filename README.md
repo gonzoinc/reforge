@@ -85,6 +85,8 @@ The **1st-gen DCC Advanced Version** is the customizable 1st-gen product. It sup
 
 See [Building Reforge Plugins](plugin.md) for the package format, available inputs, manifest examples, and current development status.
 
+Complete examples are available in the [reference plugins folder](plugins/README.md), including the configurable [Reforge CAN Mapper](plugins/can-mapper/README.md).
+
 > [!TIP]
 > 📣 **Follow [Reforge on Facebook](https://www.facebook.com/reforge3s/) for development updates, beta announcements, and release news.** You can also visit [reforge.gonzoinc.com](https://reforge.gonzoinc.com/) for official project information.
 

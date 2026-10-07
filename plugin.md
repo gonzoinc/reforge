@@ -13,6 +13,7 @@ Plugins do not contain executable code. There is no public C++, DLL, script, HTT
 ## Table of contents
 
 - [Quick start](#quick-start)
+- [Reference plugin packages](#reference-plugin-packages)
 - [Package layout](#package-layout)
 - [Build an `.rfgp` package](#build-an-rfgp-package)
 - [Public API surfaces](#public-api-surfaces)
@@ -44,6 +45,10 @@ Plugins do not contain executable code. There is no public C++, DLL, script, HTT
 7. Review its permissions and configuration, then explicitly enable it. New imports and updates are disabled by default.
 
 An installed and enabled plugin's functions appear in the Function picker for user-created custom templates. Reforge saves a collision-safe binding such as `com.example.reforge.rpm.rpm`, while the UI displays the function's friendly `function_name`.
+
+## Reference plugin packages
+
+Complete, inspectable examples are available in the [reference plugins folder](plugins/README.md). The [Reforge CAN Mapper](plugins/can-mapper/README.md) includes readable source files and an import-ready `.rfgp` package that matches the configurable passive CAN mapper described below.
 
 ## Package layout
 

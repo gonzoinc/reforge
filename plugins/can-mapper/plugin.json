@@ -1,0 +1,49 @@
+{
+  "formatVersion": 1,
+  "id": "com.gonzoinc.reforge.can-mapper",
+  "name": "Reforge CAN Mapper",
+  "version": "1.0.0",
+  "description": "Create custom display functions from passive CAN data broadcast by your ECU.",
+  "author": "Gonzo Inc.",
+  "icon": "assets/can-mapper.ico",
+  "apiVersion": 1,
+  "permissions": [
+    "exp.io.read",
+    "can.read",
+    "assets.use"
+  ],
+  "hardware": {
+    "boardProfile": "reforge-first-gen-rev-b-v1",
+    "expansion": [
+      {
+        "signal": "EXP_IO1",
+        "mode": "twai.rx"
+      },
+      {
+        "signal": "EXP_IO2",
+        "mode": "twai.listen.txIdle"
+      }
+    ],
+    "can": {
+      "interface": "twai",
+      "mode": "listenOnly",
+      "bitrate": 500000,
+      "rx": "EXP_IO1",
+      "txIdle": "EXP_IO2",
+      "transceiver": "external-3v3-logic"
+    }
+  },
+  "runtime": {
+    "kind": "canSignals",
+    "signals": [],
+    "inputs": []
+  },
+  "settings": [],
+  "functions": [],
+  "screens": [],
+  "mainScreenWidgets": [],
+  "configuration": {
+    "kind": "canSignalMappings",
+    "maxFields": 16
+  }
+}
