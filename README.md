@@ -54,7 +54,10 @@ Reforge is a Windows desktop application for creating, managing, and uploading d
 
 Two Reforge display versions are planned for the **1st-gen DCC**. Both replace the original display and show live factory climate-control information, but they are intended for different levels of customization. The display hardware is still in development and is not included in the current app-only beta.
 
-| Feature | Basic | Advanced (Rev B 1.0) |
+> [!IMPORTANT]
+> A 1st-gen DCC does not automatically include the Advanced features. Custom templates, multiple template slots, app/USB/Bluetooth template uploads, touchscreen settings, user-adjustable and automatic dimming, screensavers, and plugins require the **1st-gen DCC Advanced Rev B 1.0** version. The 1st-gen DCC Basic version does not support those features.
+
+| Feature | 1st-gen Basic | 1st-gen Advanced (Rev B 1.0) |
 | --- | :---: | :---: |
 | Designed for the 1st-gen DCC | ✅ | ✅ |
 | Live temperature, fan, vent mode, A/C, AUTO, ECON, and intake status | ✅ | ✅ |
@@ -78,7 +81,7 @@ Basic is the simple OEM-style version. It starts directly into the built-in `1st
 
 ### Advanced
 
-Advanced is the customizable version. It supports Reforge templates, two on-device template slots, USB and Bluetooth template uploads, touchscreen controls, persistent brightness and automatic dim/black settings, and screensavers. Plugin API v1 is exclusive to the **1st-gen DCC Advanced Rev B 1.0** board; Basic and 2nd-gen DCC boards do not support plugins.
+Advanced is the customizable 1st-gen version. Within the 1st-gen product line, only the **1st-gen DCC Advanced Rev B 1.0** version supports Reforge templates, two on-device template slots, app/USB/Bluetooth template uploads, touchscreen controls, persistent brightness and automatic dim/black settings, screensavers, and Plugin API v1. The 1st-gen Basic version does not support those features. Plugin API v1 also does not support 2nd-gen DCC boards.
 
 See [Building Reforge Plugins](plugin.md) for the package format, available inputs, manifest examples, and current development status.
 
