@@ -93,6 +93,41 @@ Declare only the permissions the package needs.
 
 No public v1 permission allows GPIO output, CAN transmission, OBD-II requests, UART writes, direct display drawing, touch access, SD access, BLE access, USB access, or modification of core A/C state.
 
+## Hardware requirements
+
+Every plugin installation must follow these requirements:
+
+- Use a **1st-gen DCC Advanced Rev B 1.0** board. Basic, Advanced Rev A, and 2nd-gen boards do not have a supported plugin connection.
+- Treat `EXP_IO1`, `EXP_IO2`, and `EXP_IO3` as **3.3 V input-only signals**. They are not 5 V- or 12 V-tolerant.
+- Power the external sensor, interface, or CAN module from its own correctly regulated supply. The Advanced expansion connector does not provide accessory power.
+- Connect the external module's logic ground to `EXP_GND` so its 3.3 V logic has the same reference as Reforge.
+- Never feed power into Reforge through an expansion signal or through `EXP_GND`.
+- Match the physical wiring to the signals claimed in `plugin.json`. Do not move a plugin to a different expansion input without updating and revalidating its manifest.
+- Public plugins are input-only. Do not use plugin wiring to drive a vehicle circuit, transmit CAN frames, or control an external load.
+
+### CAN plugin hardware
+
+A CAN plugin requires an external CAN transceiver or interface board. The vehicle CAN wires connect to that interface—not directly to Reforge.
+
+- The interface must use 3.3 V-safe logic on the Reforge side.
+- Connect the interface's receive output to `EXP_IO1`.
+- Connect its controller transmit/idle input to `EXP_IO2` when the plugin manifest claims `twai.listen.txIdle`.
+- Connect the interface logic ground to `EXP_GND`.
+- Power the interface separately; J2 does not provide 3.3 V or 5 V accessory power.
+- Keep the Reforge CAN controller in listen-only mode. Plugin API v1 does not transmit frames or send OBD-II requests.
+- Follow the interface manufacturer's vehicle-side wiring, isolation, protection, and termination instructions.
+
+### Digital-input plugin hardware
+
+A digital-input plugin may use `EXP_IO1`, `EXP_IO2`, or `EXP_IO3` when that signal is claimed as `gpio.digitalInput`.
+
+- The signal reaching Reforge must stay between 0 V and 3.3 V.
+- A raw vehicle, 5 V, or 12 V signal must first pass through an appropriate 3.3 V-safe conditioning or isolation circuit.
+- Connect the conditioned signal to the claimed expansion input and its logic reference to `EXP_GND`.
+- Do not connect relays, lamps, motors, solenoids, or other loads to an expansion input.
+
+If the source voltage, grounding, or required protection is uncertain, do not connect it to Reforge until the interface has been verified.
+
 ## 1st-gen DCC Advanced hardware endpoints
 
 Plugin manifests claim logical connector signals on the 1st-gen DCC Advanced Rev B board, never raw GPIO numbers. These endpoints do not exist as a plugin contract on the 1st-gen DCC Basic boards.

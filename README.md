@@ -59,17 +59,18 @@ Two Reforge display versions are planned for the **1st-gen DCC**. Both replace t
 | Designed for the 1st-gen DCC | ✅ | ✅ |
 | Live temperature, fan, vent mode, A/C, AUTO, ECON, and intake status | ✅ | ✅ |
 | 3.5-inch 480 × 320 color display | ✅ | ✅ |
-| Reforge `1st Gen OEM DCC` display layout | ✅ Fixed layout | ✅ Included layout |
-| Dims with the vehicle illumination signal | ✅ Two fixed brightness levels | ✅ Configurable brightness and automatic dimming |
+| Built-in Reforge `1st Gen OEM DCC` display layout | ✅ | ✅ |
+| Dims with the vehicle illumination signal | ✅ | ✅ |
+| User-adjustable brightness and automatic dimming | ❌ | ✅ |
 | Custom display templates | ❌ | ✅ |
-| Multiple template slots | ❌ | ✅ Two slots |
+| Multiple template slots | ❌ | ✅ |
 | Template upload from the Reforge app | ❌ | ✅ |
 | USB template upload | ❌ | ✅ |
 | Bluetooth template upload | ❌ | ✅ |
 | Touchscreen menu and settings | ❌ | ✅ |
 | Screensaver support | ❌ | ✅ |
-| Reforge plugin support | ❌ | ✅ Advanced Rev B only |
-| Passive CAN and digital-input plugins | ❌ | ✅ Requires compatible protected expansion hardware |
+| Reforge plugin support (Advanced Rev B 1.0 only) | ❌ | ✅ |
+| Passive CAN and digital-input plugins | ❌ | ✅ |
 
 ### Basic
 
