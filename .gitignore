@@ -13,3 +13,17 @@ desktop.ini
 .idea/
 .vs/
 .vscode/
+
+# KiCad local state, backups, caches, and verification output.
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_pro-bak
+*-backups/
+_autosave-*
+~*.lck
+.history/
+fp-info-cache
+fp-lib-table
+sym-lib-table
+*.rpt

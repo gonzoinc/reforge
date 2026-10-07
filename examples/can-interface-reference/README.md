@@ -18,16 +18,15 @@ The project targets only the **1st-gen DCC Advanced Rev B 1.0** board. Basic, Ad
 - `Reforge_CAN_Interface_Reference.kicad_pro` - KiCad project
 - `Reforge_CAN_Interface_Reference.kicad_sch` - complete schematic
 - `Reforge_CAN_Interface_Reference.kicad_pcb` - routed two-layer PCB
-- `Reforge_CAN_Interface_Reference.kicad_sym` - project symbol library
-- `Reforge_Reference.pretty/` - project footprint library
 - `BOM.csv` - example bill of materials
 - `Reforge_CAN_Interface_Reference.pdf` - schematic preview
 - `Reforge_CAN_Interface_Reference.svg` - schematic preview
 - `Reforge_CAN_Interface_Reference_PCB.svg` - top-side PCB/copper preview
 - `Reforge_CAN_Interface_Reference_PCB.png` - 3D board preview
-- `erc.rpt` and `drc.rpt` - current KiCad check reports
 
 Open `Reforge_CAN_Interface_Reference.kicad_pro` in KiCad 10 or later to inspect or modify the design.
+
+The schematic symbols and PCB footprints are embedded in the design files. The footprints reference the standard KiCad 10 component models through `KICAD10_3DMODEL_DIR`. Install KiCad's standard 3D model packages if the components do not appear in the 3D Viewer.
 
 ## Input connector J1
 
@@ -81,10 +80,4 @@ This intentionally simple reference omits features that may be required for a re
 - thermal validation across vehicle voltage and temperature ranges
 - electromagnetic compatibility testing
 
-The MCP1799 can accept the nominal 12 V input used here, but a linear regulator dissipates the input-to-output voltage difference as heat. Confirm the real supply range, current draw, package temperature, capacitor voltage ratings, and fault behavior before building or installing a derivative.
-
-## Verification status
-
-KiCad 10 ERC and DRC currently report zero violations and zero unconnected pads. Those checks verify the design files, not the electrical behavior, physical connector fit, component sourcing, CAN compatibility, or safety of a completed assembly.
-
-Before using a derivative, independently review the [TI SN65HVD230 datasheet](https://www.ti.com/lit/ds/symlink/sn65hvd230.pdf) and [Microchip MCP1799 datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP1799-Data-Sheet-20006248A.pdf), then prototype and test it on a current-limited bench supply and an isolated CAN test setup before considering any vehicle connection.
+The MCP1799 can accept the nominal 12 V input used here, but a linear regulator dissipates the input-to-output voltage difference as heat. Confirm the real supply range, current draw, package temperature, capacitor voltage ratings, and fault behavior before building or installing a derivative. Review the [TI SN65HVD230 datasheet](https://www.ti.com/lit/ds/symlink/sn65hvd230.pdf) and [Microchip MCP1799 datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP1799-Data-Sheet-20006248A.pdf) before selecting parts or changing the circuit.

@@ -28,7 +28,7 @@
   (net 6 "RXD")
   (net 7 "TX_IDLE")
   (net 8 "TERM_MID")
-  (footprint "Reforge_Reference:J1"
+  (footprint "J1"
     (layer "F.Cu") (uuid "6c1c98a5-b481-5636-a488-f2839f0751cd") (at 103.00 104.00 0)
         (property "Reference" "J1"
       (at 0.00 -11.80 0)
@@ -46,7 +46,7 @@
     )
     (path "/af2e3dd1-4322-5da8-8545-f3016600001d/f2c496ab-348e-5c6a-aa32-bad5141ce24a")
     (attr through_hole)
-    (fp_rect (start -3.00 -10.00) (end 3.00 10.00)
+    (fp_rect (start -3.00 -2.38) (end 3.00 17.62)
       (stroke (width 0.20) (type default)) (fill none) (layer "F.Fab") (uuid "08e796c0-9870-599e-97ae-a43d79329fd9") )
     (pad "1" thru_hole rect (at 0.00 0.00) (size 3.20 3.20) (drill 1.30) (layers "*.Cu" "*.Mask")
       (net 1 "CAN_L") (pinfunction "1") (pintype "passive") (uuid "a06788d3-d099-5107-a2a0-45e1001e5145") )
@@ -56,8 +56,13 @@
       (net 3 "+12V") (pinfunction "3") (pintype "passive") (uuid "e6c6150a-bc9e-508f-93ac-485c0c6b7ebf") )
     (pad "4" thru_hole circle (at 0.00 15.24) (size 3.20 3.20) (drill 1.30) (layers "*.Cu" "*.Mask")
       (net 4 "GND") (pinfunction "4") (pintype "passive") (uuid "304987d8-905b-5012-8677-02afb72a09d3") )
-  )
-  (footprint "Reforge_Reference:J2"
+  
+    (model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    ))
+  (footprint "J2"
     (layer "F.Cu") (uuid "0f4fab14-bdf2-5124-bbc2-e915c545ba36") (at 157.00 105.00 0)
         (property "Reference" "J2"
       (at 0.00 -6.90 0)
@@ -75,7 +80,7 @@
     )
     (path "/af2e3dd1-4322-5da8-8545-f3016600001d/cd72eda0-ce07-5bd1-8e71-e21dc49ce097")
     (attr through_hole)
-    (fp_rect (start -1.90 -5.10) (end 1.90 5.10)
+    (fp_rect (start -1.90 -1.29) (end 1.90 8.91)
       (stroke (width 0.20) (type default)) (fill none) (layer "F.Fab") (uuid "fa54e11c-7a3f-531b-87b7-7fd8db23368c") )
     (pad "1" thru_hole rect (at 0.00 0.00) (size 2.00 2.00) (drill 1.00) (layers "*.Cu" "*.Mask")
       (net 6 "RXD") (pinfunction "1") (pintype "passive") (uuid "e40e1118-bf66-56c3-a02c-b86ee50b532d") )
@@ -85,8 +90,13 @@
       (net 0 "") (pinfunction "3") (pintype "passive") (uuid "8f0cbf64-8072-5a5b-ba71-5433aa11413b") )
     (pad "4" thru_hole circle (at 0.00 7.62) (size 2.00 2.00) (drill 1.00) (layers "*.Cu" "*.Mask")
       (net 4 "GND") (pinfunction "4") (pintype "passive") (uuid "d2a9aa5e-1d44-56c2-a7db-bf5d15994bb1") )
-  )
-  (footprint "Reforge_Reference:JP1"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
+  (footprint "JP1"
     (layer "F.Cu") (uuid "385c1646-e5ba-5f76-abbc-18262ac567d9") (at 119.00 102.00 0)
         (property "Reference" "JP1"
       (at 0.00 -3.70 0)
@@ -110,8 +120,13 @@
       (net 8 "TERM_MID") (pinfunction "1") (pintype "passive") (uuid "5d13c714-00d1-55df-be81-75e453e2cdf1") )
     (pad "2" thru_hole circle (at 2.54 0.00) (size 2.20 2.20) (drill 1.00) (layers "*.Cu" "*.Mask")
       (net 1 "CAN_L") (pinfunction "2") (pintype "passive") (uuid "5e07b26d-9d09-5eae-81d0-6cf5ede16140") )
-  )
-  (footprint "Reforge_Reference:U1"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
+    ))
+  (footprint "U1"
     (layer "F.Cu") (uuid "288b52b8-0c96-5427-85dc-d5fc85c4a96f") (at 120.00 124.00 0)
         (property "Reference" "U1"
       (at 0.00 -3.40 0)
@@ -137,7 +152,12 @@
       (net 5 "+3V3") (pinfunction "2") (pintype "passive") (uuid "2002d251-24d9-5791-92e9-efa12b1f0457") )
     (pad "3" smd roundrect (at 0.95 0.00) (size 1.10 1.40) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 3 "+12V") (pinfunction "3") (pintype "passive") (uuid "0e5a8a77-d66b-5250-a4c3-6ab5aa49d29e") )
-  )
+  
+    (model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
   (footprint "U2"
     (layer "F.Cu") (uuid "42a07a95-f7c3-536b-bf6f-9492e5115638") (at 132.00 110.00 180)
         (property "Reference" "U2"
@@ -174,8 +194,13 @@
       (net 2 "CAN_H") (pinfunction "7") (pintype "passive") (uuid "8d044863-3064-5b92-a9a5-2fc26d2b4335") )
     (pad "8" smd roundrect (at 2.48 -1.91) (size 1.95 0.60) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 4 "GND") (pinfunction "8") (pintype "passive") (uuid "2f3686d4-d235-5c5f-a045-04eb4dbaa982") )
-  )
-  (footprint "Reforge_Reference:R1"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
+  (footprint "R1"
     (layer "F.Cu") (uuid "ab68fc6e-05b0-574a-a829-1c6a77f24f27") (at 148.00 126.00 0)
         (property "Reference" "R1"
       (at 0.00 -2.90 0)
@@ -199,8 +224,13 @@
       (net 5 "+3V3") (pinfunction "1") (pintype "passive") (uuid "2c023ad5-b2b6-5c1a-b85f-b3882bed7e92") )
     (pad "2" smd roundrect (at 1.00 0.00) (size 1.20 1.40) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 7 "TX_IDLE") (pinfunction "2") (pintype "passive") (uuid "56e95d29-0ad1-5a57-a9aa-c43fd52845b6") )
-  )
-  (footprint "Reforge_Reference:R2"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
+  (footprint "R2"
     (layer "F.Cu") (uuid "660475bf-d14e-5d0a-9c91-78d3e5a70439") (at 115.00 102.00 0)
         (property "Reference" "R2"
       (at 0.00 -2.90 0)
@@ -224,8 +254,13 @@
       (net 2 "CAN_H") (pinfunction "1") (pintype "passive") (uuid "1b426ed6-1eb1-5931-8021-fb7738023335") )
     (pad "2" smd roundrect (at 1.00 0.00) (size 1.20 1.40) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 8 "TERM_MID") (pinfunction "2") (pintype "passive") (uuid "8020034d-24a1-5ba5-a8e5-f53c9c1c912a") )
-  )
-  (footprint "Reforge_Reference:C1"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
+  (footprint "C1"
     (layer "F.Cu") (uuid "97a4bda5-1f24-5d0f-8df3-8e5f0343c02a") (at 112.00 128.00 0)
         (property "Reference" "C1"
       (at 0.00 -2.90 0)
@@ -249,8 +284,13 @@
       (net 3 "+12V") (pinfunction "1") (pintype "passive") (uuid "f212968c-9ad9-5644-a2b0-cbcea2858626") )
     (pad "2" smd roundrect (at 1.00 0.00) (size 1.20 1.40) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 4 "GND") (pinfunction "2") (pintype "passive") (uuid "0bca2c61-03a8-54b8-92bb-19b04b8e0d5b") )
-  )
-  (footprint "Reforge_Reference:C2"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
+  (footprint "C2"
     (layer "F.Cu") (uuid "bb7309a7-4d98-5922-9ec2-90586c92b180") (at 126.00 132.00 0)
         (property "Reference" "C2"
       (at 0.00 -2.90 0)
@@ -274,8 +314,13 @@
       (net 5 "+3V3") (pinfunction "1") (pintype "passive") (uuid "07fa8003-226e-5a03-b635-6a0edcb34449") )
     (pad "2" smd roundrect (at 1.00 0.00) (size 1.20 1.40) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 4 "GND") (pinfunction "2") (pintype "passive") (uuid "e724245d-33b6-5334-8243-9dd427bbfff1") )
-  )
-  (footprint "Reforge_Reference:C3"
+  
+    (model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
+  (footprint "C3"
     (layer "F.Cu") (uuid "ebd1b491-06fb-5227-ba9e-5fc3da319216") (at 140.00 121.00 0)
         (property "Reference" "C3"
       (at 0.00 -2.90 0)
@@ -299,7 +344,12 @@
       (net 5 "+3V3") (pinfunction "1") (pintype "passive") (uuid "93644989-8342-5ab6-9d9d-64737d5680ca") )
     (pad "2" smd roundrect (at 1.00 0.00) (size 1.20 1.40) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 4 "GND") (pinfunction "2") (pintype "passive") (uuid "85f647a4-5bb3-5feb-aded-c1d309d6e53a") )
-  )
+  
+    (model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    ))
   (gr_rect (start 100 98) (end 160 140) (stroke (width 0.25) (type default)) (fill none) (layer "Edge.Cuts") (uuid "33a8f49e-c373-52bb-9ede-f48b4dca125f") )
   (gr_text "UNTESTED REFERENCE ONLY" (at 130 138) (layer "F.SilkS") (uuid "95324c54-0bc9-51b3-92e0-8defb3b17a17") (effects (font (size 1.3 1.3) (thickness 0.22))) )
   (gr_text "J1: 1 CAN_L  2 CAN_H  3 +12V  4 GND" (at 120 99.5) (layer "F.SilkS") (uuid "4fd3ec05-9706-51a0-9882-018bb700fc6b") (effects (font (size 0.9 0.9) (thickness 0.15))) )

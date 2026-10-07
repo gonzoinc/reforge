@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "Reforge_CAN_Interface_Reference")(type "KiCad")(uri "${KIPRJMOD}/Reforge_CAN_Interface_Reference.kicad_sym")(options "")(descr "Reforge CAN reference symbols"))
-)
