@@ -3,7 +3,7 @@
 Reforge CAN Mapper is a configurable, receive-only CAN plugin for the **1st-gen DCC Advanced Version**. It lets a user describe CAN fields in Reforge Settings and then use those values as functions in custom display templates.
 
 > [!IMPORTANT]
-> Plugin support is still under development and is not included in the current Reforge 1.0.0 Beta 2 public release. This package is provided as an authoring and integration reference for plugin-capable builds.
+> This package can be imported by **Reforge Advanced Plugin Alpha 1** for app-side testing. Firmware export and live on-device CAN rendering are not complete, and plugins are not included in Reforge 1.0.0 Beta 2.
 
 > [!WARNING]
 > Never connect vehicle CAN-H or CAN-L directly to the Reforge expansion connector. A separately powered, 3.3 V-safe CAN transceiver or interface circuit is required.

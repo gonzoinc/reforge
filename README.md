@@ -87,6 +87,9 @@ See [Building Reforge Plugins](plugin.md) for the package format, available inpu
 
 Complete examples are available in the [reference plugins folder](plugins/README.md), including the configurable [Reforge CAN Mapper](plugins/can-mapper/README.md).
 
+> [!NOTE]
+> **Advanced Plugin Alpha 1** is available for early testing of plugin package import, configuration, enable/disable, and screen-editor function selection. It targets only the **1st-gen DCC Advanced Version**. Firmware export and live on-device plugin data are not complete yet.
+
 > [!TIP]
 > 📣 **Follow [Reforge on Facebook](https://www.facebook.com/reforge3s/) for development updates, beta announcements, and release news.** You can also visit [reforge.gonzoinc.com](https://reforge.gonzoinc.com/) for official project information.
 
@@ -112,8 +115,8 @@ Application source code, firmware source code, hardware designs, PCB files, manu
 ## 📦 Downloading Reforge
 
 1. Open [Releases](https://github.com/gonzoinc/reforge/releases).
-2. Choose the newest release marked **Pre-release**.
-3. Download the Windows installer attached to that release.
+2. Choose **Reforge Advanced Plugin Alpha 1** for Advanced plugin testing, or **Reforge 1.0.0 Beta 2** for the general app beta.
+3. Download the Windows installer attached to the selected release.
 4. Compare the installer’s SHA-256 hash with the published checksum before running it.
 
 ## 🛡️ Installing the Unsigned Beta on Windows

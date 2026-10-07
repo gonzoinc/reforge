@@ -8,7 +8,7 @@ Plugins do not contain executable code. There is no public C++, DLL, script, HTT
 > Plugin API v1 targets only the **1st-gen DCC Advanced Version** (`reforge-first-gen-rev-b-v1`). The 1st-gen DCC Basic Version does not support plugins, and neither do 2nd-gen DCC boards.
 
 > [!NOTE]
-> This guide documents the plugin v1 authoring contract while plugin support is still under development. Plugins are not included in the current Reforge 1.0.0 Beta 2 public release. Development builds can import, validate, configure, enable, update, and remove packages and expose enabled plugin functions in the custom-template editor. Firmware export, on-device adapters, and live plugin-value rendering remain unfinished.
+> This guide documents the plugin v1 authoring contract while plugin support is still under development. **Reforge Advanced Plugin Alpha 1** can import, validate, configure, enable, update, and remove packages and expose enabled plugin functions in the custom-template editor. Firmware export, on-device adapters, and live plugin-value rendering remain unfinished. Plugins are not included in Reforge 1.0.0 Beta 2.
 
 ## Table of contents
 

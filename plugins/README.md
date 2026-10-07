@@ -3,7 +3,7 @@
 This folder contains complete plugin packages that can be inspected, copied, and adapted for Reforge.
 
 > [!NOTE]
-> Plugin support is still under development and is not included in the current Reforge 1.0.0 Beta 2 public release. These files are provided now so plugin authors can review the package format and prepare compatible integrations.
+> Plugin support is still under development. These packages can be imported by **Reforge Advanced Plugin Alpha 1** for app-side testing. Firmware export and live on-device plugin data are not complete, and plugins are not included in Reforge 1.0.0 Beta 2.
 
 | Plugin | Purpose | Hardware |
 | --- | --- | --- |
