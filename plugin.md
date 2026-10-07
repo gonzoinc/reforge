@@ -176,6 +176,9 @@ Built-in OEM templates remain locked. Plugin data can be added only to user-crea
 > [!NOTE]
 > These steps describe the plugin-capable editor workflow under development. Enabled plugin functions already appear in the development editor's Function list. Type-aware previews, alarm editing, firmware export, and live device rendering are not complete in the current public release.
 
+> [!NOTE]
+> **Current graph status:** The assets needed for Graph elements are not complete yet. Graph assets and the finished Graph workflow are coming soon.
+
 ### Bind plugin data to an asset
 
 1. Import the plugin from **Plugins > Import Plugin**.
