@@ -12,6 +12,12 @@ This example shows one simple way to connect an existing CAN bus and a nominal 1
 
 The project targets only the **1st-gen DCC Advanced Rev B 1.0** board. Basic, Advanced Rev A, and 2nd-gen boards are not supported.
 
+## Board previews
+
+| Populated 3D view | PCB routing view |
+| --- | --- |
+| ![Populated 3D view of the CAN interface reference board](images/3dView_PCB_CanBus.png) | ![Routed PCB view of the CAN interface reference board](images/PCB_CanBus_circuit.png) |
+
 ## Included files
 
 - `Reforge_CAN_Interface_Reference.zip` - downloadable bundle of the editable project and reference files
@@ -23,6 +29,8 @@ The project targets only the **1st-gen DCC Advanced Rev B 1.0** board. Basic, Ad
 - `Reforge_CAN_Interface_Reference.svg` - schematic preview
 - `Reforge_CAN_Interface_Reference_PCB.svg` - top-side PCB/copper preview
 - `Reforge_CAN_Interface_Reference_PCB.png` - 3D board preview
+- `images/3dView_PCB_CanBus.png` - populated 3D board view
+- `images/PCB_CanBus_circuit.png` - routed PCB layout view
 
 Open `Reforge_CAN_Interface_Reference.kicad_pro` in KiCad 10 or later to inspect or modify the design.
 
