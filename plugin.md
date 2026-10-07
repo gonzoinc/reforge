@@ -10,6 +10,26 @@ Plugins do not contain executable code. There is no public C++, DLL, script, HTT
 > [!NOTE]
 > This guide documents the plugin v1 authoring contract while plugin support is still under development. Plugins are not included in the current Reforge 1.0.0 Beta 2 public release. Development builds can import, validate, configure, enable, update, and remove packages and expose enabled plugin functions in the custom-template editor. Firmware export, on-device adapters, and live plugin-value rendering remain unfinished.
 
+## Table of contents
+
+- [Quick start](#quick-start)
+- [Package layout](#package-layout)
+- [Build an `.rfgp` package](#build-an-rfgp-package)
+- [Public API surfaces](#public-api-surfaces)
+- [Permissions](#permissions)
+- [Hardware requirements](#hardware-requirements)
+  - [CAN plugin hardware](#can-plugin-hardware)
+  - [Digital-input plugin hardware](#digital-input-plugin-hardware)
+- [1st-gen DCC Advanced hardware endpoints](#1st-gen-dcc-advanced-hardware-endpoints)
+- [Configurable passive CAN mapper example](#example-configurable-passive-can-mapper)
+- [Fixed CAN signal example](#example-fixed-can-signal)
+- [Digital-input example](#example-digital-input)
+- [Declared settings](#declared-settings)
+- [Functions and editor bindings](#functions-and-editor-bindings)
+- [Optional main-screen alert declaration](#optional-main-screen-alert-declaration)
+- [Manifest rules and limits](#manifest-rules-and-limits)
+- [Import and test checklist](#import-and-test-checklist-for-plugin-capable-builds)
+
 ## Quick start
 
 1. Create a folder containing `plugin.json` at its root.
