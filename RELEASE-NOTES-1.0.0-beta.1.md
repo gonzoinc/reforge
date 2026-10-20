@@ -1,17 +1,18 @@
 # Reforge 1.0.0 Beta 1
 
-This is the first public beta release of the Reforge AC Display Editor. It is intended for testing and feedback. Bugs, incomplete behavior, and unexpected results are possible.
+This refreshed 1.0.0 Beta 1 installer replaces the retired beta-walkthrough build. Reforge remains beta software; bugs and incomplete behavior are possible.
 
 ## Highlights
 
 - Create and manage display templates for 1st Gen / 480 x 320 and 2nd Gen / 320 x 240 Reforge displays.
 - Start from three locked factory templates and copy factory assets into independent editable versions.
-- Use the bundled release asset library without custom-user backgrounds or screensavers.
+- Use the bundled asset library and the first-gen OEM template's new **Center out** temperature-bar asset. The original cumulative bar asset remains available separately.
 - Configure template slots, brightness, automatic dimming, automatic black-screen behavior, and optional screensavers through the upload wizard.
 - Test compatible USB or Bluetooth connections before uploading a template package.
-- Report beta problems through the yellow **Report a Bug** control in the app header.
+- Check for app and first-gen Advanced firmware updates from the app's Update screen. App updates download a complete installer; Advanced firmware updates require USB.
+- Report beta problems through the app's **Report a Bug** control.
 - Review app information, version details, licensing, notices, contribution terms, and branding rules from the About window.
-- Choose whether Reforge should remove or preserve local settings, templates, imported assets, fonts, and backups during uninstall.
+- Installing over a previous version preserves local settings, templates, imported assets, fonts, and backups. Uninstall asks separately before removing user data.
 
 ## System Requirements
 
@@ -27,7 +28,7 @@ This is the first public beta release of the Reforge AC Display Editor. It is in
 SHA-256:
 
 ```text
-c7ed1cbc7333b20afb4c9ec05046879fc2a5c1508a05f49b72cf348e4ce6f80e  Reforge-Setup-1.0.0-beta.1-win-x64.exe
+6b1a0de7549255fa1f06bcdf4c7d33d3706e27709fcfbd61278d3470a71e117d  Reforge-Setup-1.0.0-beta.1-win-x64.exe
 ```
 
 Verify the downloaded installer against this checksum before running it.
@@ -39,7 +40,9 @@ This beta installer is not code-signed. Microsoft Defender SmartScreen may warn 
 ## Known Beta Limitations
 
 - The installer is unsigned and does not yet have established SmartScreen reputation.
-- Reforge does not currently provide automatic application updates; install newer beta versions manually from the official GitHub Releases page.
+- The Update screen checks published releases but does not silently install app updates. The full installer must still be run by the user.
+- In-app firmware updating supports only first-gen Advanced over USB. First-gen Basic has a separate firmware package and requires a compatible flashing workflow.
+- The new Basic and Advanced firmware images have not yet been flashed or bench-validated; software build and checksum verification do not establish hardware acceptance.
 - USB, Bluetooth, and hardware upload behavior depends on the connected device, firmware version, and display generation and remains part of beta testing.
 - This public repository distributes the compiled beta application and support documents only; application source, firmware source, hardware designs, and private development material are not included.
 

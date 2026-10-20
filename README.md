@@ -1,17 +1,10 @@
 # Reforge Beta
 
-## ⬇️ Download Reforge Beta 2 and Complete the Beta Wizard
+## Download Reforge 1.0.0 Beta
 
-1. Download **[Reforge 1.0.0 Beta 2 for Windows](https://github.com/gonzoinc/reforge/releases/download/v1.0.0-beta.2/Reforge-Setup-1.0.0-beta.2-win-x64.exe)**.
-2. Download the required **[Beta Asset Samples](https://github.com/gonzoinc/reforge/releases/download/v1.0.0-beta.2/Reforge-Beta-Asset-Samples.zip)** and extract the ZIP to an easy-to-find folder.
-3. Install and launch Reforge. The **Beta Wizard** appears in the right sidebar and guides you through the required tasks in order.
-4. Use sample files `01` through `05` for normal asset imports and the blank-template task. Use `06-temperature-bars-asset-group.svg` for the temperature asset-group mapping task.
-5. Complete each wizard task once. The progress bars show the five required template edits and the five assets plus mapped temperature group required for the blank template.
-6. If a task is confusing or blocked, select its **?** button to leave a note. A blocked task can be skipped only after adding a comment, and that feedback is included with the final beta record.
-7. After every task is resolved, select **Complete Beta Wizard**. Reforge opens the Beta Onboarding form where you can submit feedback and optionally join the conversion-display waitlist. Verify the email message to finish the entry.
+Download the [self-contained Windows installer and checksum](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.1). The installer updates a previous Reforge installation without removing local settings, templates, or imported assets. Verify the checksum before running the unsigned installer.
 
-> [!IMPORTANT]
-> The sample artwork is also installed with Reforge and can be opened from the relevant Beta Wizard help window. The separate ZIP is provided so the required files are available before testing begins.
+First-generation [Basic](https://github.com/gonzoinc/reforge/releases/tag/firmware-basic-v1.0.0-beta.1) and [Advanced](https://github.com/gonzoinc/reforge/releases/tag/firmware-advanced-v1.0.2) firmware packages are separate releases in this repository. The app can update **Advanced** over USB; Basic needs a separate compatible flashing workflow.
 
 The installer is unsigned. Verify its SHA-256 checksum from the release assets before running it, and follow the [SmartScreen instructions below](#installing-the-unsigned-beta-on-windows) if Windows blocks installation.
 
@@ -37,12 +30,12 @@ The installer is unsigned. Verify its SHA-256 checksum from the release assets b
 
 ## 🧪 What This Beta Tests
 
-**[Open the Reforge 1.0.0 Beta 2 release page](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.2)**
+**[Open the Reforge 1.0.0 Beta 1 release page](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.1)**
 
 The release page includes the Windows installer, its SHA-256 checksum, release notes, system requirements, and known beta limitations.
 
 > [!IMPORTANT]
-> This beta is for testing the **Reforge desktop app only**. End-user Reforge display hardware is not currently available, so testers are not expected to test USB, Bluetooth, firmware, display installation, or vehicle operation. Please focus feedback on the app experience, template tools, included assets, settings, import/export behavior, installation, and uninstall behavior.
+> Reforge remains beta software. The newly rebuilt firmware packages have passed software build and image-integrity checks but have not yet been flashed or bench-validated. Do not treat a download as hardware acceptance.
 
 Reforge is a Windows desktop application for creating, managing, and uploading display templates for supported Mitsubishi 3000GT and Dodge Stealth digital climate-control display replacements.
 
@@ -88,7 +81,7 @@ See [Building Reforge Plugins](plugin.md) for the package format, available inpu
 Complete examples are available in the [reference plugins folder](plugins/README.md), including the configurable [Reforge CAN Mapper](plugins/can-mapper/README.md).
 
 > [!NOTE]
-> **Advanced Plugin Alpha 1** is available for early testing of plugin package import, configuration, enable/disable, and screen-editor function selection. It targets only the **1st-gen DCC Advanced Version**. Firmware export and live on-device plugin data are not complete yet.
+> Advanced plugin support remains limited to the **1st-gen DCC Advanced Version**. Firmware export and live on-device plugin data are not complete yet.
 
 > [!TIP]
 > 📣 **Follow [Reforge on Facebook](https://www.facebook.com/reforge3s/) for development updates, beta announcements, and release news.** You can also visit [reforge.gonzoinc.com](https://reforge.gonzoinc.com/) for official project information.
@@ -115,7 +108,7 @@ Application source code, firmware source code, hardware designs, PCB files, manu
 ## 📦 Downloading Reforge
 
 1. Open [Releases](https://github.com/gonzoinc/reforge/releases).
-2. Choose **Reforge Advanced Plugin Alpha 1** for Advanced plugin testing, or **Reforge 1.0.0 Beta 2** for the general app beta.
+2. Choose **Reforge 1.0.0 Beta 1** for the Windows app. Basic and Advanced firmware have separate release pages.
 3. Download the Windows installer attached to the selected release.
 4. Compare the installer’s SHA-256 hash with the published checksum before running it.
 
