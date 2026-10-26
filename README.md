@@ -1,12 +1,15 @@
-# Reforge Beta
+# Reforge
 
-## Download Reforge 1.0.0 Beta
+First-generation Reforge Basic and Advanced climate-control display conversions are **open for preorder** for compatible 1991–1997 Mitsubishi 3000GT and Dodge Stealth vehicles with digital climate control. Reforge is a mail-in conversion service, not a self-install kit. The factory climate-control computer and controls remain in place.
 
-Download the [self-contained Windows installer and checksum](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.1). The installer updates a previous Reforge installation without removing local settings, templates, or imported assets. Verify the checksum before running the unsigned installer.
+| Version | Best for | Preorder |
+| --- | --- | --- |
+| **Basic** | A fixed OEM-style display of live factory climate information. | [Preorder Basic](https://reforge.gonzoinc.com/product/reforge-1st-gen-climate-control-basic-preorder-deposit/) |
+| **Advanced** | Custom templates, app uploads, touchscreen settings, screensavers, and plugin support. | [Preorder Advanced](https://reforge.gonzoinc.com/product/reforge-1st-gen-climate-control-advanced-preorder-deposit/) |
 
-First-generation [Basic](https://github.com/gonzoinc/reforge/releases/tag/firmware-basic-v1.0.0-beta.1) and [Advanced](https://github.com/gonzoinc/reforge/releases/tag/firmware-advanced-v1.0.2) firmware packages are separate releases in this repository. The app can update **Advanced** over USB; Basic needs a separate compatible flashing workflow.
+Each preorder requires a **$100 non-refundable deposit per unit**, credited toward the final conversion price. The current conversion prices are $500 for Basic and $575 for Advanced, before selected add-ons and return shipping. Preorders close **November 15, 2026 at 11:59 PM Eastern**. Read the product pages for compatibility, options, timing, and the full deposit terms. **Do not mail your unit with the deposit**; shipping instructions follow final payment.
 
-The installer is unsigned. Verify its SHA-256 checksum from the release assets before running it, and follow the [SmartScreen instructions below](#installing-the-unsigned-beta-on-windows) if Windows blocks installation.
+The [Reforge website](https://reforge.gonzoinc.com/) is the source for current product and ordering information. This repository provides Windows app downloads, documentation, and app issue tracking. The available app installers and firmware packages have their own release status; a release labeled beta or alpha is still an early software build.
 
 <p align="center">
   <img src="assets/reforge-updates-20260916-clean.png" alt="Reforge AC display project" width="80%">
@@ -15,7 +18,7 @@ The installer is unsigned. Verify its SHA-256 checksum from the release assets b
 <h3 align="center">Connecting legacy to tomorrow.</h3>
 
 <p align="center">
-  <img alt="Status: Beta" src="https://img.shields.io/badge/STATUS-BETA-C79B29?style=for-the-badge">
+  <img alt="First-generation preorders open" src="https://img.shields.io/badge/1ST--GEN-PREORDERS%20OPEN-C79B29?style=for-the-badge">
   <img alt="Windows 10 and 11" src="https://img.shields.io/badge/WINDOWS-10%20%7C%2011-0078D4?style=for-the-badge&logo=windows11&logoColor=white">
   <img alt="License: PolyForm Noncommercial" src="https://img.shields.io/badge/LICENSE-NONCOMMERCIAL-FF8012?style=for-the-badge">
 </p>
@@ -28,14 +31,14 @@ The installer is unsigned. Verify its SHA-256 checksum from the release assets b
   <a href="https://github.com/gonzoinc/reforge/issues"><strong>🐛 Report an app bug</strong></a>
 </p>
 
-## 🧪 What This Beta Tests
+## Windows App and Firmware Downloads
 
-**[Open the Reforge 1.0.0 Beta 1 release page](https://github.com/gonzoinc/reforge/releases/tag/v1.0.0-beta.1)**
+Browse the [official Releases page](https://github.com/gonzoinc/reforge/releases) for the Windows installer, firmware packages, checksums, and release notes. Check each release's version, requirements, and limitations before installing. Verify downloaded files against their published SHA-256 checksums.
 
-The release page includes the Windows installer, its SHA-256 checksum, release notes, system requirements, and known beta limitations.
+The installer is unsigned. Follow the [SmartScreen instructions below](#installing-unsigned-reforge-builds-on-windows) if Windows blocks a verified download. The app can update **Advanced** firmware over USB; Basic needs a separate compatible flashing workflow.
 
 > [!IMPORTANT]
-> Reforge remains beta software. The newly rebuilt firmware packages have passed software build and image-integrity checks but have not yet been flashed or bench-validated. Do not treat a download as hardware acceptance.
+> Preordering a first-generation conversion does not change the status of individual app or firmware releases. Check the notes for the specific download you use. Software build checks alone do not establish hardware acceptance.
 
 Reforge is a Windows desktop application for creating, managing, and uploading display templates for supported Mitsubishi 3000GT and Dodge Stealth digital climate-control display replacements.
 
@@ -45,7 +48,7 @@ Reforge is a Windows desktop application for creating, managing, and uploading d
 
 ## 🔧 Basic and Advanced Display Versions
 
-Two Reforge display versions are planned for the **1st-gen DCC**. Both replace the original display and show live factory climate-control information, but they are intended for different levels of customization. The display hardware is still in development and is not included in the current app-only beta.
+Two Reforge display versions are available to preorder as first-generation mail-in conversions. Both replace the original display and show live factory climate-control information, but they offer different levels of customization. The current preorder is for a conversion service, not a retail display or a self-install kit.
 
 > [!IMPORTANT]
 > A 1st-gen DCC does not automatically include the Advanced features. Custom templates, multiple template slots, app/USB/Bluetooth template uploads, touchscreen settings, user-adjustable and automatic dimming, screensavers, and plugins require the **1st-gen DCC Advanced Version**. The 1st-gen DCC Basic Version does not support those features.
@@ -84,16 +87,16 @@ Complete examples are available in the [reference plugins folder](plugins/README
 > Advanced plugin support remains limited to the **1st-gen DCC Advanced Version**. Firmware export and live on-device plugin data are not complete yet.
 
 > [!TIP]
-> 📣 **Follow [Reforge on Facebook](https://www.facebook.com/reforge3s/) for development updates, beta announcements, and release news.** You can also visit [reforge.gonzoinc.com](https://reforge.gonzoinc.com/) for official project information.
+> 📣 **Follow [Reforge on Facebook](https://www.facebook.com/reforge3s/) for project updates and release news.** Visit [reforge.gonzoinc.com](https://reforge.gonzoinc.com/) for current preorder information.
 
 > [!WARNING]
-> 🧪 Reforge is currently beta software. Bugs, incomplete behavior, and unexpected results are possible.
+> App and firmware prereleases may contain bugs or incomplete features. Review the notes for the version you download.
 
-## 🚧 Beta Status
+## About This Repository
 
 This repository is the public home for:
 
-- Official compiled Reforge beta downloads.
+- Official compiled Reforge app and firmware downloads.
 - End-user information and release notes.
 - App bug reports and issue tracking.
 - License, notices, and branding terms.
@@ -108,13 +111,13 @@ Application source code, firmware source code, hardware designs, PCB files, manu
 ## 📦 Downloading Reforge
 
 1. Open [Releases](https://github.com/gonzoinc/reforge/releases).
-2. Choose **Reforge 1.0.0 Beta 1** for the Windows app. Basic and Advanced firmware have separate release pages.
+2. Choose the Windows app release appropriate for your display and review its notes. Basic and Advanced firmware have separate release pages.
 3. Download the Windows installer attached to the selected release.
 4. Compare the installer’s SHA-256 hash with the published checksum before running it.
 
-## 🛡️ Installing the Unsigned Beta on Windows
+## 🛡️ Installing Unsigned Reforge Builds on Windows
 
-Reforge beta installers are not code-signed. On some Windows systems, Microsoft Defender SmartScreen blocks the installer completely and does not offer a **Run anyway** option. In that case, SmartScreen's app check must be disabled temporarily before the installer can run.
+Reforge installers are not code-signed. On some Windows systems, Microsoft Defender SmartScreen blocks the installer completely and does not offer a **Run anyway** option. In that case, SmartScreen's app check must be disabled temporarily before the installer can run.
 
 Before changing SmartScreen:
 
@@ -151,7 +154,7 @@ The app’s yellow bug button opens the repository’s Issues page in the defaul
 
 ## ⚖️ License
 
-Official Reforge beta binaries are licensed for personal, educational, repair, hobby, research, and other noncommercial use under the [PolyForm Noncommercial License 1.0.0](LICENSE.md), subject to the required notices in that file.
+Official Reforge app binaries are licensed for personal, educational, repair, hobby, research, and other noncommercial use under the [PolyForm Noncommercial License 1.0.0](LICENSE.md), subject to the required notices in that file.
 
 Commercial use is not included. See [Commercial Licensing](COMMERCIAL-LICENSE.md) for examples and additional information.
 
